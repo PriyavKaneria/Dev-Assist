@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #e3e3e3;
 }
-
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +40,52 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.outerDiv {
+  margin: 2vw;
+  background-color: lightgrey;
+  height: 90vh;
+  width: 96vw;
+  border-radius: 10px;
+}
+
+.react-chatbot-kit-chat-bot-avatar-icon {
+  width: unset;
+  height: unset;
+}
+
+.react-chatbot-kit-chat-bot-avatar-container {
+  background-color: unset;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  border-radius: 0px 0px 0px 0px;
+  margin-left: unset;
+  position: absolute;
+  left: 8vw;
+  max-width: 40vw;
+}
+
+.react-chatbot-kit-chat-container {
+  width: auto;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  margin: 15px;
+  width: calc(100vw - 32px);
+  height: auto;
+}
+
+.react-chatbot-kit-chat-input {
+  width: calc(100vw - 155px);
+}
+
+.react-chatbot-kit-chat-input-container {
+  top: 87vh;
+  bottom: unset;
+}
+
+.react-chatbot-kit-chat-message-container {
+  height: 84vh;
 }
