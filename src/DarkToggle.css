@@ -1,101 +1,71 @@
-body {
-    background: var(--backgroundSecondary);
-    padding-top: 40px;
-    font-family: sans-serif;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.Button {
-    background: #52388f;
-    color: #fff;
-    border: none;
-    font-size: 1rem;
-    margin: 0;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: box-shadow 0.4s;
-}
-.Button:hover {
-    box-shadow: 0 2px 20px rgba(82, 56, 143, 0.7);
-}
-html.dark .Button:hover {
-    background: #6746b4;
-}
-@media (prefers-color-scheme: dark) {
-    .Button:hover {
-        background: #6746b4;
-   }
-}
-.TextCard {
-    padding: 30px 25px;
-    box-shadow: 0 4px 20px rgba(12, 104, 85, 0.22);
-    border-radius: 8px;
-    background: var(--backgroundPrimary);
-    width: 340px;
-}
-html.dark .TextCard {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-@media (prefers-color-scheme: dark) {
-    .TextCard {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-   }
-}
-.TextCard__Title {
-    margin-top: 0;
-    color: var(--foregroundSecondary);
-}
-.TextCard__Body {
-    line-height: 1.4;
-    color: var(--foregroundPrimary);
-}
+
 body {
     --foregroundPrimary: #222;
-    --foregroundSecondary: #14ad8c;
-    --backgroundPrimary: #fff;
-    --backgroundSecondary: #dcf7f4;
+    --foregroundSecondary: rgba(121, 24, 0, 0.377);
+    --foregroundTertiary: #272727;
+    --backgroundPrimary: #6eb0fc;
+    --backgroundSecondary: #d8d8d8;
+    --gradient1: #4b134f;
+    --gradient2: #c94b4b;
+    --robot: #0000003d;
 }
 html.dark body {
-    --foregroundPrimary: #d8d8d8;
-    --foregroundSecondary: #14ad8c;
-    --backgroundPrimary: #222;
-    --backgroundSecondary: #130d21;
+    --foregroundPrimary: #747474;
+    --foregroundSecondary: #000000;
+    --foregroundTertiary: #a8a8a8;
+    --backgroundPrimary: #2b2b2b;
+    --backgroundSecondary: #222;
+    --gradient1: #000000;
+    --gradient2: #363636;
+    --robot: #ffffff28;
 }
 @media (prefers-color-scheme: dark) {
     body {
-        --foregroundPrimary: #d8d8d8;
-        --foregroundSecondary: #14ad8c;
-        --backgroundPrimary: #222;
-        --backgroundSecondary: #130d21;
+        --foregroundPrimary: #222;
+        --foregroundSecondary: rgba(121, 24, 0, 0.377);
+        --foregroundTertiary: #272727;
+        --backgroundPrimary: #6eb0fc;
+        --backgroundSecondary: #d8d8d8;
+        --gradient1: #4b134f;
+        --gradient2: #c94b4b;
+        --robot: #0000003d;
+   }
+   html.dark body {
+    --foregroundPrimary: #747474;
+    --foregroundSecondary: #000000;
+    --foregroundTertiary: #a8a8a8;
+    --backgroundPrimary: #2b2b2b;
+    --backgroundSecondary: #222;
+    --gradient1: #000000;
+    --gradient2: #363636;
+    --robot: #ffffff28;
    }
 }
-.DarkToggle.react-toggle {
+
+.toggle {
     position: absolute;
-    z-index: 10;
-    left: 20px;
-    bottom: 20px;
+    left: 3vw;
+    top: 3vh;
+    /* border: 2px solid green; */
+    --size: 2rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    cursor: pointer;
+    width: var(--size);
+    height: var(--size);
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+    border-radius: 999px;
+    color: #e6e6ff;
+    transition: all 500ms;
+    z-index: 5;
 }
-.DarkToggle.react-toggle .react-toggle-thumb {
-    border: none;
-}
-.DarkToggle.react-toggle.react-toggle--focus .react-toggle-thumb, .DarkToggle.react-toggle.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
-    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.5);
-}
-.DarkToggle.react-toggle .react-toggle-track, .DarkToggle.react-toggle.react-toggle--checked .react-toggle-track, .DarkToggle.react-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track, .DarkToggle.react-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-    background: "mint";
-}
-.DarkToggle.react-toggle .react-toggle-track-check {
-    left: 6px;
-}
-.DarkToggle.react-toggle .react-toggle-track-x {
-    right: 12px;
-}
-.DarkToggle.react-toggle .react-toggle-track-check, .DarkToggle.react-toggle .react-toggle-track-x {
-    font-size: 13px;
-    line-height: 2em;
-    height: 100%;
-    text-shadow: 0 0 #fff;
-    color: transparent;
+.toggle:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    color: #ffaa00;
+    box-shadow: inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
 }

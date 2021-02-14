@@ -29,9 +29,9 @@ class ActionProvider {
 		store(message["code"])
     }
 
-	greet() {
-		const greetingMessage = this.createChatBotMessage("Hi, friend.")
-		this.updateChatbotState(greetingMessage)
+	get_best_results() {
+		const gbrMessage = this.createChatBotMessage("Wait a moment. Getting best results for you!")
+		this.updateChatbotState(gbrMessage)
 	}
 
     dont_be_silent() {

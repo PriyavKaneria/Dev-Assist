@@ -1,54 +1,37 @@
+*{
+  scroll-behavior: smooth;
+}
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar{
+  display: none;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: #e3e3e3;
-}
-/* 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background: #c94b4b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,var(--gradient1), var(--gradient2));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,var(--gradient1), var(--gradient2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Chatbot-header {
+  background-color: var(--foregroundTertiary);
+  padding: 5px;
+  border-radius: 6px 6px 0px 0px;
+  color: var(--backgroundSecondary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-.outerDiv {
+/* .outerDiv {
   margin: 2vw;
   background-color: lightgrey;
   height: 90vh;
   width: 96vw;
   border-radius: 10px;
-}
+} */
 
 .react-chatbot-kit-chat-bot-avatar-icon {
   width: unset;
@@ -63,7 +46,7 @@
   font-family: 'Jetbrains';
   border-radius: 0px 0px 0px 0px;
   margin-left: unset;
-  width: 30vw;
+  width: 50vw;
 }
 
 .react-chatbot-kit-chat-container {
@@ -72,12 +55,24 @@
 
 .react-chatbot-kit-chat-inner-container {
   margin: 15px;
-  width: calc(100vw - 32px);
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
   height: auto;
+  box-shadow: 16px 16px 40px var(--foregroundPrimary),
+              -16px 16px 50px var(--foregroundSecondary);
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: var(--foregroundPrimary);
 }
 
 .react-chatbot-kit-chat-input {
+  font-size: 1.1rem;
+  outline: none;
+  background: #768a97;
   width: calc(100vw - 155px);
+  color: white;
 }
 
 .react-chatbot-kit-chat-input-container {
@@ -89,18 +84,62 @@
   height: 84vh;
 }
 
-.react-chatbot-kit-chat-textarea {
-  width: calc(100vw - 157px);
-  margin-top: 15px;
-  height: 16px;
-  margin-left: 2.2vw;
-  padding: 12.5px;
-  border: none;
-  font-size: 0.85rem;
-  border-top: 1px solid #d8d8d8;
-  border-bottom-left-radius: 5px;
-}
-
 .code-viewer-container {
   font-family: 'Courier New', Courier, monospace;
+  color: var(--foregroundTertiary);
+  background-color: var(--backgroundPrimary);
+  max-width: 50vw;
+  text-align: left;
+  border: 2px solid grey;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  background-color: var(--backgroundPrimary);
+  color: var(--foregroundTertiary);
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  border-right: 8px solid var(--backgroundPrimary);
+}
+
+.react-chatbot-kit-chat-btn-send {
+  width: calc(50vw - 42.2vw);
+  background-color: var(--backgroundPrimary);
+}
+
+.robot {
+  /* position: absolute; */
+  /* left: 1%; */
+  /* top: 50vh; */
+  height: 100%;
+  filter: drop-shadow(10px -6px 1px var(--robot));
+}
+
+
+@media only screen and (max-width: 500px) {
+  .App {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .react-chatbot-kit-chat-inner-container {
+    width: 80vw;
+    height: 50vh;
+  }
+  .react-chatbot-kit-chat-message-container {
+    height: 40vh;
+  }
+  .react-chatbot-kit-chat-input-container {
+    top: 45vh;
+  }
+  .react-chatbot-kit-chat-input {
+    font-size: 0.7rem;
+  }
+  .react-chatbot-kit-chat-btn-send {
+    width: 22vw;
+  }
+}
+
+
+body{
+  overflow-x: hidden;
 }

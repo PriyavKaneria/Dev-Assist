@@ -3,27 +3,24 @@ import { DarkToggle } from "./DarkToggle";
 import Chatbot from "react-chatbot-kit"
 import "./App.css"
 import "./DarkToggle.css"
+import Robot from "./robot"
 
 import ActionProvider from "./ActionProvider"
 import MessageParser from "./MessageParser"
 import config from "./config"
-
 function App() {
   // <ThemeProvider>
-  {/* const { theme, setTheme } = useTheme(); */}
 	return (
 		<div className='App'>
+      	<Robot/>
+      	<DarkToggle />
 			<header className='App-header'>
 				<Chatbot
 					config={config}
 					actionProvider={ActionProvider}
 					messageParser={MessageParser}
 				/>
-				{/* <div className='react-chatbot-kit-chat-input-container'>
-            <textarea className='react-chatbot-kit-chat-textarea' onChange={this.handlechange}></textarea>
-				</div> */}
 			</header>
-      <DarkToggle />
 		</div>
 	)
   // </ThemeProvider>

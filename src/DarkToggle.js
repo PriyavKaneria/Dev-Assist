@@ -24,14 +24,9 @@ export const DarkToggle = () => {
       document.documentElement.classList.remove(DARK_CLASS);
     }
   }, [isDark]);
+  console.log(isDark);
 
   return (
-    <Toggle
-      className="DarkToggle"
-      checked={isDark}
-      onChange={toggleEvent => setIsDark(toggleEvent.target.checked)}
-      icons={{ checked: "🌙", unchecked: "🔆" }}
-      aria-label="Dark mode"
-    />
+    <input type="checkbox" className="toggle" checked={isDark} onChange={toggleEvent => setIsDark(toggleEvent.target.checked)}/>
   );
 };
