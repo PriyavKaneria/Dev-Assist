@@ -1,5 +1,9 @@
 // Config starter code
+import React, { useEffect } from "react"
+import $ from "jquery"
 import { createChatBotMessage } from "react-chatbot-kit"
+import Cookies from 'universal-cookie'
+
 import { ReactComponent as RoboIcon } from "../src/logo.svg";
 
 const BotAvatar = () => {
@@ -9,6 +13,28 @@ const BotAvatar = () => {
             <RoboIcon className="react-chatbot-kit-chat-bot-avatar-icon" />
         </div>
         </div>
+    );
+};
+
+
+const CodeViewer = (props) => {
+    const { setState } = props;
+// fetch().then(res => res.json()).then((data) => {
+    // useEffect(() => {
+        
+    // })
+    var mycookie = new Cookies();
+    var code = mycookie.get('code');
+    console.log("hello");
+    console.log(code);
+    // $(".code-viewer-container").innerText = code;
+    // console.log($(".code-viewer-container").innerText);
+    return (
+      <div>
+        <div className="code-viewer-container">
+            <pre><code>{ code }</code></pre>
+        </div>
+      </div>
     );
 };
 
@@ -40,13 +66,12 @@ const config = {
             backgroundColor: "#5ccc9d",
         },
     },
-    // widgets: [
-    //     {
-    //       widgetName: "CodeViewer",
-    //       widgetFunc: (props) => <CodeViewer {...props} />,
-    //       mapStateToProps: ["messages", "selectedAirport", "airports"],
-    //     }
-    // ]
+    widgets: [
+        {
+          widgetName: "CodeViewer",
+          widgetFunc: (props) => <CodeViewer {...props} />,
+        }
+    ]
 }
 
 export default config

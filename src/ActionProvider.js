@@ -1,4 +1,13 @@
 // ActionProvider starter code
+import Cookies from 'universal-cookie'
+
+const mycookie = new Cookies();
+
+function store(code) {
+	mycookie.set('code', code, { path: '/' });
+	console.log(mycookie.get('code'));
+}
+
 class ActionProvider {
 	constructor(createChatBotMessage, setStateFunc, createClientMessage) {
 		this.createChatBotMessage = createChatBotMessage
@@ -9,8 +18,15 @@ class ActionProvider {
     answer(message) {
 		const answerMessage = this.createChatBotMessage(message["message"])
 		this.updateChatbotState(answerMessage)
-        const ansCodeMessage = this.createChatBotMessage(message["code"])
+        const ansCodeMessage = this.createChatBotMessage("This is the code👇🏻",
+            {
+				widget: "CodeViewer",
+                loading: true,
+                terminateLoading: true,
+                withAvatar: true,
+            })
         this.updateChatbotState(ansCodeMessage)
+		store(message["code"])
     }
 
 	greet() {
@@ -33,6 +49,7 @@ class ActionProvider {
 			...prevState,
 			messages: [...prevState.messages, message],
 		}))
+		console.log("done");
 	}
 }
 
