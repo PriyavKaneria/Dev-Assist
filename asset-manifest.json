@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Dev-Assist/static/css/main.f77d9f10.chunk.css",
-    "main.js": "/Dev-Assist/static/js/main.54e5643f.chunk.js",
-    "main.js.map": "/Dev-Assist/static/js/main.54e5643f.chunk.js.map",
+    "main.css": "/Dev-Assist/static/css/main.eea44d03.chunk.css",
+    "main.js": "/Dev-Assist/static/js/main.4981450c.chunk.js",
+    "main.js.map": "/Dev-Assist/static/js/main.4981450c.chunk.js.map",
     "runtime-main.js": "/Dev-Assist/static/js/runtime-main.d4abca2e.js",
     "runtime-main.js.map": "/Dev-Assist/static/js/runtime-main.d4abca2e.js.map",
     "static/js/2.cc548236.chunk.js": "/Dev-Assist/static/js/2.cc548236.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.2db9b961.chunk.js": "/Dev-Assist/static/js/3.2db9b961.chunk.js",
     "static/js/3.2db9b961.chunk.js.map": "/Dev-Assist/static/js/3.2db9b961.chunk.js.map",
     "index.html": "/Dev-Assist/index.html",
-    "static/css/main.f77d9f10.chunk.css.map": "/Dev-Assist/static/css/main.f77d9f10.chunk.css.map",
+    "static/css/main.eea44d03.chunk.css.map": "/Dev-Assist/static/css/main.eea44d03.chunk.css.map",
     "static/js/2.cc548236.chunk.js.LICENSE.txt": "/Dev-Assist/static/js/2.cc548236.chunk.js.LICENSE.txt",
     "static/media/logo.8afa2b20.svg": "/Dev-Assist/static/media/logo.8afa2b20.svg",
     "static/media/logo3.5ca6d51a.svg": "/Dev-Assist/static/media/logo3.5ca6d51a.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.d4abca2e.js",
     "static/js/2.cc548236.chunk.js",
-    "static/css/main.f77d9f10.chunk.css",
-    "static/js/main.54e5643f.chunk.js"
+    "static/css/main.eea44d03.chunk.css",
+    "static/js/main.4981450c.chunk.js"
   ]
 }
