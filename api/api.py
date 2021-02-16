@@ -13,7 +13,7 @@ from selenium.webdriver.common.keys import Keys
 options = webdriver.ChromeOptions()
 options.headless = True
 
-app = Flask(__name__,static_folder='/build',static_url_path='')
+app = Flask(__name__,)
 cors = CORS(app)
 
 @app.route('/')
