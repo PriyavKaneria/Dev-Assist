@@ -18,7 +18,7 @@ class MessageParser {
             // Fetch data using temp and message
             var formData = new FormData();
             formData.append("search",message)
-            fetch('https://https://dev-assist-api.herokuapp.com/api/inputValue',
+            fetch('https://dev-assist-api.herokuapp.com/api/inputValue',
                 {method: 'POST', mode: 'cors', body: formData})
             .then(res => res.json())
             .then(data => {
