@@ -19,7 +19,7 @@
     "universal-cookie": "^4.0.4",
     "web-vitals": "^1.0.1"
   },
-  "proxy": "https://anshiflutterapp.web.app",
+  "proxy": "https://dev-assist-api.herokuapp.com/",
   "scripts": {
     "start": "react-scripts start",
     "start-api": "cd api && flask run --no-debugger",
