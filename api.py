@@ -36,10 +36,12 @@ def getQuery():
         code = driver.find_element(By.CLASS_NAME, "accepted-answer").find_element(By.TAG_NAME, "pre")
         message = driver.find_element(By.CLASS_NAME, "s-prose")
         driver.quit()
-        return {"message":message.text, "code":code.text}
     except:
-        try:
-            driver.quit()
+        message=""
+        driver.quit()
+    if message and message.text!="":
+        return {"message":message.text, "code":code.text}
+    else:
         return {}
     
 if __name__ == "main":
