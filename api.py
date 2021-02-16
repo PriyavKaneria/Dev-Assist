@@ -27,19 +27,20 @@ def home():
 def getQuery():
     query = request.form['search'] + ' stack overflow'
     print(query)
+    code="No related code"
     try:
         driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
         driver.implicitly_wait(10)
         google = driver.get("https://www.google.com/")
         driver.find_element(By.NAME, "q").send_keys(query, Keys.ENTER)
         driver.find_element(By.TAG_NAME, "h3").click()
-        code = driver.find_element(By.CLASS_NAME, "accepted-answer").find_element(By.TAG_NAME, "pre")
-        message = driver.find_element(By.CLASS_NAME, "s-prose")
+        code = driver.find_element(By.CLASS_NAME, "accepted-answer").find_element(By.TAG_NAME, "pre").text
+        message = driver.find_element(By.CLASS_NAME, "s-prose").text
         driver.quit()
     except:
         message=""
         driver.quit()
-    if message and message.text!="":
+    if message!="":
         return {"message":message.text, "code":code.text}
     else:
         return {}
