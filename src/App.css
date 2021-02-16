@@ -2,144 +2,136 @@
   scroll-behavior: smooth;
 }
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar{
-  display: none;
+  display: none !important;
 }
 
 .App {
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background: #c94b4b;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right,var(--gradient1), var(--gradient2));  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right,var(--gradient1), var(--gradient2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center !important;
+  display: flex !important;
+  justify-content: space-evenly !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  background: #c94b4b !important;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,var(--gradient1), var(--gradient2)) !important;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,var(--gradient1), var(--gradient2)) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .Chatbot-header {
-  background-color: var(--foregroundTertiary);
-  padding: 5px;
-  border-radius: 6px 6px 0px 0px;
-  color: var(--backgroundSecondary);
+  background-color: var(--foregroundTertiary) !important;
+  padding: 5px !important;
+  border-radius: 6px 6px 0px 0px !important;
+  color: var(--backgroundSecondary) !important;
 }
 
-/* .outerDiv {
-  margin: 2vw;
-  background-color: lightgrey;
-  height: 90vh;
-  width: 96vw;
-  border-radius: 10px;
-} */
-
 .react-chatbot-kit-chat-bot-avatar-icon {
-  width: unset;
-  height: unset;
+  width: unset !important;
+  height: unset !important;
 }
 
 .react-chatbot-kit-chat-bot-avatar-container {
-  background-color: unset;
+  background-color: unset !important;
 }
 
 .react-chatbot-kit-chat-bot-message {
-  font-family: 'Jetbrains';
-  border-radius: 0px 0px 0px 0px;
-  margin-left: unset;
-  width: 50vw;
+  font-family: 'Jetbrains' !important;
+  border-radius: 0px 0px 0px 0px !important;
+  margin-left: unset !important;
+  width: 50vw !important;
 }
 
 .react-chatbot-kit-chat-container {
-  width: auto;
+  width: auto !important;
 }
 
 .react-chatbot-kit-chat-inner-container {
-  margin: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50vw;
-  height: auto;
+  margin: 15px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 50vw !important;
+  height: auto !important;
   box-shadow: 16px 16px 40px var(--foregroundPrimary),
-              -16px 16px 50px var(--foregroundSecondary);
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: var(--foregroundPrimary);
+              -16px 16px 50px var(--foregroundSecondary) !important;
+  background: #141E30 !important;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30) !important;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: var(--foregroundPrimary) !important;
 }
 
 .react-chatbot-kit-chat-input {
-  font-size: 1.1rem;
-  outline: none;
-  background: #768a97;
-  width: calc(100vw - 155px);
-  color: white;
+  font-size: 1.1rem !important;
+  outline: none !important;
+  background: #768a97 !important;
+  width: calc(100vw - 155px) !important;
+  color: white !important;
 }
 
 .react-chatbot-kit-chat-input-container {
-  top: 87vh;
-  bottom: unset;
+  top: 87vh !important;
+  bottom: unset !important;
 }
 
 .react-chatbot-kit-chat-message-container {
-  height: 84vh;
+  height: 84vh !important;
 }
 
 .code-viewer-container {
-  font-family: 'Courier New', Courier, monospace;
-  color: var(--foregroundTertiary);
-  background-color: var(--backgroundPrimary);
-  max-width: 50vw;
-  text-align: left;
-  border: 2px solid grey;
+  font-family: 'Courier New', Courier, monospace !important;
+  color: var(--foregroundTertiary) !important;
+  background-color: var(--backgroundPrimary) !important;
+  max-width: 50vw !important;
+  text-align: left !important;
+  border: 2px solid grey !important;
 }
 
 .react-chatbot-kit-chat-bot-message {
-  background-color: var(--backgroundPrimary);
-  color: var(--foregroundTertiary);
+  background-color: var(--backgroundPrimary) !important;
+  color: var(--foregroundTertiary) !important;
 }
 
 .react-chatbot-kit-chat-bot-message-arrow {
-  border-right: 8px solid var(--backgroundPrimary);
+  border-right: 8px solid var(--backgroundPrimary) !important;
 }
 
 .react-chatbot-kit-chat-btn-send {
-  width: calc(50vw - 42.2vw);
-  background-color: var(--backgroundPrimary);
+  width: calc(50vw - 42.2vw) !important;
+  background-color: var(--backgroundPrimary) !important;
 }
 
 .robot {
-  /* position: absolute; */
-  /* left: 1%; */
-  /* top: 50vh; */
-  height: 100%;
-  filter: drop-shadow(10px -6px 1px var(--robot));
+  /* position: absolute !important; */
+  /* left: 1% !important; */
+  /* top: 50vh !important; */
+  height: 100% !important;
+  filter: drop-shadow(10px -6px 1px var(--robot)) !important;
 }
 
 
 @media only screen and (max-width: 500px) {
   .App {
-    flex-direction: column;
-    margin-top: 0;
+    flex-direction: column !important;
+    margin-top: 0 !important;
   }
   .react-chatbot-kit-chat-inner-container {
-    width: 80vw;
-    height: 50vh;
+    width: 80vw !important;
+    height: 50vh !important;
   }
   .react-chatbot-kit-chat-message-container {
-    height: 40vh;
+    height: 40vh !important;
   }
   .react-chatbot-kit-chat-input-container {
-    top: 45vh;
+    top: 45vh !important;
   }
   .react-chatbot-kit-chat-input {
-    font-size: 0.7rem;
+    font-size: 0.7rem !important;
   }
   .react-chatbot-kit-chat-btn-send {
-    width: 22vw;
+    width: 22vw !important;
   }
 }
 
 
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
