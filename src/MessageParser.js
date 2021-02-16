@@ -18,7 +18,7 @@ class MessageParser {
             // Fetch data using temp and message
             var formData = new FormData();
             formData.append("search",message)
-            fetch('http://localhost:3000/inputValue',
+            fetch('http://anshiflutterapp.web.app/inputValue',
                 {method: 'POST', mode: 'cors', body: formData})
             .then(res => res.json())
             .then(data => {
