@@ -23,12 +23,7 @@ class MessageParser {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(JSON.stringify(data)==="{}") {
-                    this.actionProvider.answer("Could not fetch data! :(")
-                }
-                else{
-                    this.actionProvider.answer(data)
-                }
+                this.actionProvider.answer(data)
             })
             .catch(console.error)
         }

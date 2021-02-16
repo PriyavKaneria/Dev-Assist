@@ -21,18 +21,8 @@ const BotAvatar = () => {
 
 
 const CodeViewer = (props) => {
-    const { setState } = props;
-// fetch().then(res => res.json()).then((data) => {
-    // useEffect(() => {
-        
-    // })
     var mycookie = new Cookies();
     var code = mycookie.get('code');
-    console.log("hello");
-    console.log(code);
-    // code = prettier.format(code, {parser: "typescript",plugins: [parserTypeScript]});
-    // $(".code-viewer-container").innerText = code;
-    // console.log($(".code-viewer-container").innerText);
     return (
       <div>
         <div className="code-viewer-container">

@@ -38,13 +38,11 @@ def getQuery():
         code = driver.find_element(By.CLASS_NAME, "accepted-answer").find_element(By.TAG_NAME, "pre").text
         message = driver.find_element(By.CLASS_NAME, "s-prose").text
         driver.quit()
-    except:
+    except Exception as e:
+        print(e)
         message=""
         driver.quit()
-    if message!="" or message!="Could not fetch answer. Sry":
-        return {"message":message, "code":code}
-    else:
-        return {}
+    return {"message":message, "code":code}
     
 if __name__ == "main":
     app.run(host='0.0.0.0')
