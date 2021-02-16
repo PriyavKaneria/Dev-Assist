@@ -28,6 +28,7 @@ def getQuery():
     query = request.form['search'] + ' stack overflow'
     print(query)
     code="No related code"
+    message = "Could not fetch answer. Sry"
     try:
         driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
         driver.implicitly_wait(10)
@@ -40,8 +41,8 @@ def getQuery():
     except:
         message=""
         driver.quit()
-    if message!="":
-        return {"message":message.text, "code":code.text}
+    if message!="" or message!="Could not fetch answer. Sry":
+        return {"message":message, "code":code}
     else:
         return {}
     
