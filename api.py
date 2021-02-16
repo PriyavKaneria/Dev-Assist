@@ -33,12 +33,11 @@ def getQuery():
         google = driver.get("https://www.google.com/")
         driver.find_element(By.NAME, "q").send_keys(query, Keys.ENTER)
         driver.find_element(By.TAG_NAME, "h3").click()
-        code = driver.find_element(By.CLASS_NAME, "s-prose").find_element(By.TAG_NAME, "pre").text
         message = driver.find_element(By.CLASS_NAME, "s-prose").text
+        code = driver.find_element(By.CLASS_NAME, "s-prose").find_element(By.TAG_NAME, "pre").text
         driver.quit()
     except Exception as e:
         print(e)
-        message=""
         driver.quit()
     return {"message":message, "code":code}
     
