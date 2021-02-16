@@ -1,4 +1,5 @@
 from flask import Flask, render_template, flash, request, redirect, url_for
+from flask_cors import CORS, cross_origin
 from fastapi.encoders import jsonable_encoder
 import json
 import requests as rq
@@ -12,13 +13,16 @@ from selenium.webdriver.common.keys import Keys
 options = webdriver.ChromeOptions()
 options.headless = True
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='/build',static_url_path='')
+cors = CORS(app)
 
 @app.route('/')
+@cross_origin()
 def home():
-    render_template('index.html')
+    return "Api is working! welcome"
 
-@app.route('/inputValue', methods=['POST'])
+@app.route('/api/inputValue', methods=['POST'])
+@cross_origin()
 def getQuery():
     query = request.form['search'] + ' stackoverflow'
     print(query)
@@ -37,5 +41,5 @@ def getQuery():
     return {"message":message.text, "code":code.text}
     
 if __name__ == "main":
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
 
