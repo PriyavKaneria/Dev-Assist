@@ -1,8 +1,6 @@
 from flask import Flask, render_template, flash, request, redirect, url_for
 from flask_cors import CORS, cross_origin
-from fastapi.encoders import jsonable_encoder
 import json
-import requests as rq
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -35,7 +33,7 @@ def getQuery():
         google = driver.get("https://www.google.com/")
         driver.find_element(By.NAME, "q").send_keys(query, Keys.ENTER)
         driver.find_element(By.TAG_NAME, "h3").click()
-        code = driver.find_element(By.CLASS_NAME, "accepted-answer").find_element(By.TAG_NAME, "pre").text
+        code = driver.find_element(By.CLASS_NAME, "s-prose").find_element(By.TAG_NAME, "pre").text
         message = driver.find_element(By.CLASS_NAME, "s-prose").text
         driver.quit()
     except Exception as e:

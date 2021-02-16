@@ -2,6 +2,4 @@ Flask_Cors==3.0.10
 webdriver_manager==3.3.0
 Flask==1.1.2
 selenium==3.141.0
-requests==2.24.0
-fastapi==0.63.0
 gunicorn
